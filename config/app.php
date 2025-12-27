@@ -123,4 +123,8 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+
+    'base_name_app' => env('BASE_NAME_APP', 'Security Office'),
+    'prefix_name_app' => env('PREFIX_NAME_APP', 'SC'),
+
 ];
