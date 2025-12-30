@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
@@ -14,5 +15,7 @@ Route::controller(AuthController::class)->group(function(){
 });
 
 Route::controller(DashboardController::class)->group(function(){
-    Route::get('/','index')->name('dasboard');
+    Route::get('/dashboard','index')->name('dasboard');
 });
+
+Route::resource('attendances',AttendanceController::class)->names('attendances');
